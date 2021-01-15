@@ -1,498 +1,65 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <head>
-
-		<!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+{% seo %}
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
         
-        <title>Tan Tran Resume</title>
+        {% if site.logo %}
+          <img src="{{site.logo | relative_url}}" alt="Logo" />
+        {% endif %}
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300">
-		    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
-        <link rel="stylesheet" href="../assets/css/animate.css">
-        <link rel="stylesheet" href="../assets/css/style.css">
-        <link rel="stylesheet" href="../assets/css/media-queries.css">
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-        <!-- Favicon and touch icons -->
-        <!-- <link rel="shortcut icon" href="../assets/ico/tantran_icon.jpg"> -->
-        <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png"> -->
-        <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png"> -->
-        <!-- <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png"> -->
-        <!-- <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png"> -->
+        {% if site.github.is_project_page %}
+        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
+        {% endif %}
 
-    </head>
+        {% if site.github.is_user_page %}
+        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
+        {% endif %}
 
-    <body>
+        {% if site.show_downloads %}
+        <ul class="downloads">
+          <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
+          <li><a href="{{ site.github.tar_url }}">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+        </ul>
+        {% endif %}
+      </header>
+      <section>
 
-        <!-- Top menu -->
-        <nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
-          <div class="container">
-            <a class="navbar-brand" href="default.html">Bootstrap 4 One Page Website Tutorial</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav ml-auto">
-                      <li class="nav-item">
-                          <a class="nav-link scroll-link" href="#top-content">Top</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link scroll-link" href="#about-me">About</a>
-					  </li>
-					  <li class="nav-item">
-						<a class="nav-link scroll-link" href="#work-experience">Work</a>
-					</li>
-                      <li class="nav-item">
-                          <a class="nav-link scroll-link" href="#portfolio">Projects</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link scroll-link" href="#activities">Activities</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link scroll-link" href="#blog">Blog</a>
-					  </li>
-					  <li class="nav-item">
-						<a class="nav-link scroll-link" href="#footer">Contacts</a>
-					</li>
-                  </ul>
-              </div>
-            </div>
-        </nav>
-        <!--End of Top menu -->
+      {{ content }}
 
-        <!-- Top content -->
-        <div class="top-content">
-            <div class="container">
-            	
-                <div class="row">
-                  <div class="row justify-content-start align-items-center">
-                    <div class="col-lg-6 wow fadeInLeftBig">
-                      <img class="img-fluid" src="../assets/img/portrait_2_invert.png" alt="">
-                    </div>						
-                    <div class="col-lg-6  wow fadeInRightBig">
-                      <h1 class="text text-white">
-                        Hi, I’m <br>
-                        <span>Tan Tran</span> <br>					
-					  </h1>
-					  <h4 class="text-white">Welcome to my site</h4>
-                      <p class="mx-auto text-white  mt-20 mb-40">
-						Let's get to know more about me !
-					</p>
-                      <div class="top-big-link">
-                        <a class="btn btn-primary btn-link-1" href="https://linkedin.com/in/tan-tran-cong/">My Linkedin</a>
-                        <a class="btn btn-primary btn-link-2 scroll-link" href="#footer">My Contacts</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-            </div>            
-        </div>
-        <!--End of Top content -->
-
-        <!-- about me -->
-        <div class="about-me-container section-container section-container-gray-bg">
-	        <div class="container">
-
-              <div class="row">
-                <div class="col more-services section-description wow fadeIn">
-                    <h2>About Me</h2>
-                    <div class="divider-1 wow fadeInUp"><span></span></div>
-                </div>
-              </div>
-
-	            <div class="row">
-	            	<div class="col-12 col-lg-6 about-me-box wow fadeInLeft">
-	                    <div class="about-me-box-text">
-	                    	<h3>About me</h3>
-	                    	<p class="medium-paragraph">
-	                    		My full name is <b>Tran Cong Tan</b>, for short, <b>Tan Tran</b>. My English name is <b>Harry</b>, thank you for visiting my place.
-	                    	</p>
-	                    	<p>
-                          I am a Computer Science graduated student of Ho Chi Minh University of Science (VNU-HCMUS). With a data-driven mindset and researching enthusiasm. 
-                          I love researching and sharing knowledge about machine learning and any other technical related aspects. 
-                          Also, i keen on building awesome applications with beautiful interface and features. 
-                          Currently, i look forward to having opportunities to research and develop myself with these fields.  
-	                    	</p>
-	                    	<p>
-                          I would like to earn experience through real-life projects within technical fields. 
-                          Specifically, i want to challengemyself with the position of machine learning related position, as this field has been shown to be very promising.
-	                    	</p>
-	                    </div>
-	                </div>
-	                <div class="col-12 col-lg-6 about-me-box wow fadeInUp">
-	                	<!-- <div class="about-me-box-img">
-	                    	<img src="../assets/img/about/profile.png" alt="about" data-at2x="../assets/img/about/profile.png">
-                        <div class = 'desc'>
-                          <h3>Tran Cong Tan</h3>
-                          <p>Wanted to be Machine Learning Engineer</p>
-                          <p>tranctan96@gmail.com</p>
-						</div> -->
-						<div class="about-me-box-text">
-							<h3>Skills</h3>
-							<ul class="skills">
-								<li>
-									<p>Python and Data stacks (Pandas, Seaborn, Sklearn, Matplotlib, Numpy, Tensorflow)</p>
-								</li>
-								<li>
-									<p>Ability to perform data cleaning, visualization, manipulation, SQL and APIs</p>
-								</li>
-								<li>
-									<p>Experience in using Git, Version Control and working in software developing processes</p>
-								</li>
-								<li>
-									<p>Strong presentation, mentoring and communication skills</p>
-								</li>
-								<li>
-									<p>Experience in working in multinational environment</p>
-								</li>
-								<li>
-									<p>Ability to deeply research and well documenting</p>
-								</li>
-							</ul>
-						</div>
-                      </div>
-                  </div>
-	            </div>
-	        </div>
-        </div>
-        <!--End of about me -->
-
-        <!-- Work Experience -->
-        <div class="work-experience-container section-container">
-	        <div class="container">
-	        	
-	            <div class="row">
-	                <div class="col more-services section-description wow fadeIn">
-	                    <h2>Work Experience & Education</h2>
-	                    <div class="divider-1 wow fadeInUp"><span></span></div>
-	                </div>
-	            </div>
-	            
-	            <div class="row">
-					<ul class="timeline">
-						<li>
-							<div class="timeline-badge primary"><i class="glyphicon glyphicon-check"></i></div>
-							<div class="timeline-panel wow fadeInLeftBig">
-								<div class="timeline-heading">
-									<h4 class="timeline-title">Machine Learning Instructor</h4>
-									<p><small class="text-muted">CoderSchool</small></p>
-								</div>
-								<div class="timeline-body">
-									<p>Conveyed machine learning concepts (mainly on tabular data), including issues regarding data and machine learning,
-										feature engineering, evaluation metrics and traditional machine learning algorithms.</p>
-									<p>Conveyed comprehensive data manipulation tutorials, including Python data stacks (Pandas, Seaborn, Matplotlib,
-										Scikit-learn).</p>
-									<p>Successfully one-on-one tutored 3 cases from non-technical background to be fully familiar with Python.</p>
-									<p>Implemented automatic SMS application, using regex to handle textual data and phone numbers, using Python
-										Requests library to connect to 3rd party SMS API.</p>
-									<p>Assisted 6 courses and officially instructed 5 courses with learners from a diversity of backgrounds (technical and
-										non-technical) and nationalities (Vietnam, India, Australia, Japan, Singapore, etc.)</p>
-									<p>Instructed and implemented Python related projects, including Python backend frameworks.</p>
-								</div>
-								
-							</div>
-							<h4 class="timeline-date wow fadeInUpBig">Nov 18 - Sep 19</h4>
-						</li>
-						<li class="timeline-inverted">
-							<div class="timeline-badge success"><i class="glyphicon glyphicon-credit-card"></i></div>
-							<div class="timeline-panel wow fadeInRightBig">
-							<div class="timeline-heading">
-								<h4 class="timeline-title">Bachelor of Science</h4>
-								<p><small class="text-muted">University of Science (VNU-HCMUS)</small></p>
-							</div>
-							<div class="timeline-body">
-								<p>Graduated with a Very-Good tier from Advanced Program in Computer Science of VNU-HCMUS.</p>
-								<p><b>Thesis</b>: SEMI-SUPERVISED LEARNING BASED ON THE CO-TRAINING TECHNIQUE FOR CLASSIFYING HCV TREATMENT - Score: 9.5/10</p>
-							</div>
-							</div>
-							<h4 class="timeline-date-inverted wow fadeInUpBig">Oct 14 - Oct 18</h4>
-						</li>
-						<li>
-							<div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
-							<div class="timeline-panel wow fadeInLeftBig">
-							<div class="timeline-heading">
-								<h4 class="timeline-title">Software Engineer Intern</h4>
-								<p><small class="text-muted">Citynow</small></p>
-							</div>
-							<div class="timeline-body">
-								<p>Assigned and estimated tasks for a team of 3 front-end intern members.</p>
-								<p>Implemented "Video-Slide synchronization" features using ReactJS.</p>
-								<p>Incorporated with back-end team members to request APIs.</p>
-								<p>Implemented a chat feature for teachers and students using ReactJS, NodeJS, SocketIO.</p>
-							</div>
-							</div>
-							<h4 class="timeline-date wow fadeInUpBig">Nov 17 - Apr 18</h4>
-						</li>
-						<li class="timeline-inverted">
-							<div class="timeline-badge danger"><i class="glyphicon glyphicon-credit-card"></i></div>
-							<div class="timeline-panel wow fadeInRightBig">
-							<div class="timeline-heading">
-								<h4 class="timeline-title">Software Engineer Intern</h4>
-								<p><small class="text-muted">FPT Software</small></p>
-							</div>
-							<div class="timeline-body">
-								<p>Learnt Java Spring to implemented back-end service for vehicle fleets tracking platform.</p>
-								<p>Incorporated with front-end team members to design APIs.</p>
-								<p>Incorporated with back-end team members to break down and estimate tasks complexity under Agile Scrum
-									process.</p>
-							</div>
-							</div>
-							<h4 class="timeline-date-inverted wow fadeInUpBig">May 17 - Aug 17</h4>
-						</li>
-					</ul>
-              </div>
-	        </div>
-        </div>
-        
-        <!-- End of Work Experience -->
-
-        <!-- Portfolio -->
-        <div class="portfolio-container section-container">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col portfolio section-description wow fadeIn">
-	                    <h2>Highlighted Projects</h2>
-	                    <div class="divider-1 wow fadeInUp"><span></span></div>
-	                    <p>My latest projects regarding Python, Machine Learning and Data Science. Check them out!</p>
-	                </div>
-	            </div>
-	            <div class="row">
-                	<div class="col-md-3 portfolio-box wow fadeInUp">
-	                	<div class="portfolio-box-image">
-	                		<img class = "img-fluid" src="../assets/img/portfolio/ds_bowl.png" alt="" data-at2x="assets/img/portfolio/ds_bowl.png">
-						</div>
-                		<h3><a href="https://github.com/tranctan/Kaggle-Data-Science-Bowl-2019">Data Science Bowl 2019</a></h3>
-                		<div class="portfolio-box-date">Kaggle</div>
-                		<p>The first global data science competition that i participated with my friend. 
-							As we learned a lot from other experts, this is my summary of what we got out of this competition.</p>
-                    </div>
-                    <div class="col-md-3 portfolio-box wow fadeInDown">
-	                	<div class="portfolio-box-image">
-	                		<img class = "img-fluid" src="../assets/img/portfolio/twitter.png" alt="" data-at2x="assets/img/portfolio/twitter.png">
-	                	</div>
-                		<h3><a href="https://github.com/tranctan/Gender-Classification-based-on-Twritter-textual-data">Gender Classification </a></h3>
-                		<div class="portfolio-box-date">based on Twitter profile</div>
-                		<p>One of my personal projects to perform data science steps for a particular dataset. Within this work, i mainly used traditional text mining techniques with other baseline classifiers.</p>
-                    </div>
-                    <div class="col-md-3 portfolio-box wow fadeInUp">
-	                	<div class="portfolio-box-image">
-	                		<img src="../assets/img/portfolio/vnese.png" alt="" data-at2x="assets/img/portfolio/vnese.png">
-	                	</div>
-                		<h3><a href="https://github.com/tranctan/Vietnamese-Text-Cleaning">Vietnamese Text Cleaning</a></h3>
-                		<div class="portfolio-box-date">texts manipulation</div>
-                		<p>A Python notebook for cleaning and normalizing Vietnamese textual data. As Vietnamese has a total different way of manipulation compared to the famous English language.</p>
-					</div>
-					<div class="col-md-3 portfolio-box wow fadeInUp">
-	                	<div class="portfolio-box-image">
-	                		<img src="../assets/img/portfolio/pandas.png" alt="" data-at2x="assets/img/portfolio/pandas.png">
-	                	</div>
-                		<h3><a href="https://pandas.pydata.org/">Pandas Contribution</a></h3>
-                		<div class="portfolio-box-date">Pandas library</div>
-                		<p>My pull requests <a href="https://github.com/pandas-dev/pandas/pull/30153">30153</a> and <a href="https://github.com/pandas-dev/pandas/pull/26083">26083</a> to Pandas open-sourced library that got merged. I especially learn a lot from contributing to MOOC, as i can learn from other senior developers all around the world.</p>
-                    </div>
-              </div>
-              <div class="row">
-	            	<div class="col section-bottom-button wow fadeInUp">
-                        <a class="btn btn-primary btn-link-3" href="https://github.com/tranctan">Check out my Github !</a>
-	            	</div>
-	            </div>
-	        </div>
-        </div>
-        <!-- End of Portfolio -->
-		
-		<!-- Activities -->
-		<div class="activities-container">
-			<div class="container">
-				<div class="row">
-	                <div class="col portfolio section-description wow fadeIn">
-	                    <h2>My Activities</h2>
-	                    <div class="divider-1 wow fadeInUp"><span></span></div>
-	                </div>
-				</div>
-				<div class="row">
-					<div id="activities-carousel" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-						  <li data-target="#activities-carousel" data-slide-to="0" class="active"></li>
-						  <li data-target="#activities-carousel" data-slide-to="1"></li>
-						  <li data-target="#activities-carousel" data-slide-to="2"></li>
-						</ol>
-						<div class="activities-carousel-inner">
-						  <div class="carousel-item active">
-							<img src="../assets/img/testimonials/google.JPG" class="d-block w-100" alt="...">
-							<div class="carousel-caption d-none d-md-block">
-							  <h5>Participant of Google's Training the Trainers</h5>
-							  <p>A program to train participants to organize ML bootcamp, sponsored by Google</p>
-							</div>
-						  </div>
-						  <div class="carousel-item">
-							<img src="../assets/img/testimonials/presenter.PNG" class="d-block w-100" alt="...">
-							<div class="carousel-caption d-none d-md-block">
-							  <h5>Presenter at Machine Learning Bootcamp</h5>
-							  <p>An amazing program to introduce Google stacks for ML to everyone for free, sponsored by Google</p>
-							</div>
-						  </div>
-						  <div class="carousel-item">
-							<img src="../assets/img/testimonials/studyjam.jpg" class="d-block w-100" alt="...">
-							<div class="carousel-caption d-none d-md-block">
-							  <h5>Presenter at Google Cloud Study Jam</h5>
-							  <p>A program to introduce developers and give free credits to learn about Google Cloud technologies, sponsored by GDG Cloud HCM</p>
-							</div>
-						  </div>
-						</div>
-						<a class="carousel-control-prev" href="#activities-carousel" role="button" data-slide="prev">
-						  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						  <span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#activities-carousel" role="button" data-slide="next">
-						  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-						  <span class="sr-only">Next</span>
-						</a>
-					  </div>
-				</div>
-				
-
-			</div>
-			
-		</div>
-		<!-- End of Activities -->
-        
-
-        <!-- Blog -->
-        <div class="blog-container section-container">
-	        <div class="container">
-	        	
-	            <div class="row">
-	                <div class="col blog section-description wow fadeIn">
-	                    <h2>My Notes and Tutorials</h2>
-						<div class="divider-1 wow fadeInUp"><span></span></div>
-						<p>I love taking notes while doing research, hope they can help others, too. Check them out!</p>
-
-	                </div>
-	            </div>
-	            
-	            <div class="row">
-	                <div class="col-md-6 blog-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="blog-box-image">
-	                				<img src="../assets/img/blog/python.png" alt="" data-at2x="assets/img/blog/python.png">
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-								<h3><a href="https://gist.github.com/tranctan/f14c0a796f2706b903499e37d8b1d8c8">About Python</a> <i class="fas fa-angle-right"></i></h3>
-	                			<div class="blog-box-date">Programming Language</div>
-		                    	<p>
-									A comprehensive notes on Python, from definition to data types, OOP, and attached resrouces that i found useful. 
-								</p>
-	                		</div>
-	                	</div>
-	                </div>
-	                <div class="col-md-6 blog-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="blog-box-image">
-	                				<img src="../assets/img/blog/pandas.png" alt="" data-at2x="assets/img/blog/pandas.png">
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-	                			<h3><a href="https://gist.github.com/tranctan/c0a7501587b2ea79ddd369afa7a769c3">Pandas Contribution</a> <i class="fas fa-angle-right"></i></h3>
-	                			<div class="blog-box-date">Open Source Contribution</div>
-		                    	<p>
-									The process of making public contributions is not easy to get started, hence, i note down necessary steps when i made contributions for Pandas.
-								</p>
-	                		</div>
-	                	</div>
-	                </div>
-	            </div>
-	            
-	            <div class="row">
-	                <div class="col-md-6 blog-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="blog-box-image">
-	                				<img src="../assets/img/blog/heroku.png" alt="" data-at2x="assets/img/blog/heroku.png">
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-	                			<h3><a href="https://gist.github.com/tranctan/61fc6761206ba471064f3d416e666f61">Heroku Deployment with Python</a> <i class="fas fa-angle-right"></i></h3>
-	                			<div class="blog-box-date">Web Deployment</div>
-		                    	<p>
-									As a part of my task to instruct Python related subjects, here is my notes on how to deploy with Python on Heroku.
-								</p>
-	                		</div>
-	                	</div>
-	                </div>
-	                <div class="col-md-6 blog-box wow fadeInLeft">
-	                	<div class="row">
-	                		<div class="col-md-3">
-	                			<div class="blog-box-image">
-	                				<img src="../assets/img/blog/sklearn.png" alt="" data-at2x="assets/img/blog/sklearn.png">
-	                			</div>
-	                		</div>
-	                		<div class="col-md-9">
-	                			<h3><a href="https://gist.github.com/tranctan/ad80a1c816dc904d9b8d4553718dc588">KNN Classifier</a> <i class="fas fa-angle-right"></i></h3>
-	                			<div class="blog-box-date">Machine Learning</div>
-		                    	<p>
-									One of my notes about machine learning algorithms, KNN is easy to understand and very interesting to make use of.
-								</p>
-	                		</div>
-	                	</div>
-	                </div>
-	            </div>
-	            
-	            <div class="row">
-	            	<div class="col section-bottom-button wow fadeInUp">
-                        <a class="btn btn-primary btn-link-3" href="https://gist.github.com/tranctan">Check out my gist!!</a>
-	            	</div>
-	            </div>
-
-	        </div>
-        </div>
-        <!-- End of Blog -->
-        <!-- Footer -->
-        <footer>
-	        <div class="footer-container container">
-	        	<div class="row">
-                    <div class="col-md-5 footer-left">
-                    	<p>&copy; This site is built on top of <a href="http://azmind.com">AZMIND</a> template, with my customization</p>
-                    </div>
-                    
-                    <div class="col-md-6 offset-md-1 footer-right">
-						<h3 class="text-white">CONTACT ME </h3>
-						<p>Ho Chi Minh city, Vietnam, 70000</p>
-						(+84) 924 349 946  <a><i class="fas fa-phone"></i></a><br>
-						tranctan96@gmail.com <a><i class="fas fa-envelope-square"></i></a> <br>
-						github.com/tranctan <a href="https://github.com/tranctan"><i class="fab fa-github"></i></a> <br>
-						gist.github.com/tranctan <a href="https://gist.github.com/tranctan"><i class="fab fa-github-alt"></i></a> <br>
-						linkedin.com/tranctan <a href="https://www.linkedin.com/in/tan-tran-4b465b172/"><i class="fab fa-linkedin-in"></i></a> <br>
-                    </div>
-                </div>
-                <div class="row">
-                	<div class="col footer-bottom">
-		           		<a class="scroll-link" href="#top-content"><i class="fas fa-chevron-up"></i></a>
-		           	</div>
-                </div>
-	        </div>
-        </footer>
-        <!-- End of Footer -->
-
-        <!-- Javascript -->
-        <script src="../assets/js/jquery-3.2.1.min.js"></script>
-        <script src="../assets/js/jquery-migrate-3.0.0.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="../assets/js/jquery.backstretch.min.js"></script>
-        <script src="../assets/js/wow.min.js"></script>
-        <script src="../assets/js/retina-1.1.0.min.js"></script>
-        <script src="../assets/js/waypoints.min.js"></script>
-        <script src="../assets/js/scripts.js"></script>
-
-    </body>
-
+      </section>
+      <footer>
+        {% if site.github.is_project_page %}
+        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+    {% if site.google_analytics %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', '{{ site.google_analytics }}', 'auto');
+      ga('send', 'pageview');
+    </script>
+    {% endif %}
+  </body>
 </html>
