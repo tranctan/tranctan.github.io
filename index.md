@@ -1,10 +1,10 @@
-## Portfolio
+## Projects
 
 ---
 
-### Category Name 1 
+### Speech Projects Demo
 
-[Project 1 Title](/sample_page)
+[Emotional Voice Conversion](/emo_voice)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
